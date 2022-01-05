@@ -16,12 +16,7 @@ def insert_user_data(name, chat_id, lang):
     con.commit()
 
 def uplang(lang, chatid):
-    cur.execute("SELECT lang FROM user WHERE chat_id = ?",(chatid,))
-    l = cur.fetchall()
-    for la in l:
-        lan = la[0]
-    
-    cur.execute("UPDATE user SET lang = ? WHERE lang = ?", (lang, lan))
+    cur.execute("UPDATE user SET lang = ? WHERE chat_id = ?", (lang, chatid))
     con.commit()
 def detect_lang(chat_id):
     cur.execute("SELECT lang FROM user WHERE chat_id=?",(chat_id,))
