@@ -1,2 +1,2 @@
-token = "5088118900:AAEEuvF_7gkgrWPaET5F63ReLNPxYLssYwM"
+token = ""
 admin_id = 1883949853
